@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
-import "../style/global.css";
+import { Body } from "@/components/Body";
 
 const roboto = Roboto({
   subsets: ["latin"], 
@@ -21,9 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <title>Stormbound</title>
+      </head>
       <body className={roboto.className + " bg-solid-grey"}>
         
         <Header /> 
+        <Body />
         {children}     
       </body>
     </html>

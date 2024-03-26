@@ -1,31 +1,33 @@
 import Image from "next/image"
-import Logo from '@/assets/dragonLogo.webp'
+import Logo from '@/assets/tode_token.png'
 import Arrow from '@/assets/arrow-down.svg'
 
 export function Header() {
     return (
-        <header className="w-full h-30 bg-snow-grey rounded-lg">
-            <div>
-                <div>
-                    <Image
+        <header className="w-full h-20 bg-blue-600">
+           <div className="justify-between">
+           
+            <div className="flex justify-center items-center h-full gap-5 text-snow-grey">
+                            
+                    <Image 
                         src={Logo}
-                        alt="dragon logo"
-                        width={80} 
-                        height={80} 
-                    />
-                    <ul className="flex space-x-3">
-                        <h1 className="px-1">Stormbound</h1>
-                        <a href="">Sobre</a>
-                        <a href="">Facções</a>
-                        <a href="">Como jogar</a>
-                        <a href="">Contato</a>
-                        <button className="bg-primary-red text-snow-grey rounded-sm">
-                            <span>Para você</span>
-                        </button>
-                        
-                    </ul>
-                </div>
+                        alt="Logo"
+                        width={100}
+                        height={100}>
+                    </Image>
+
+                    <button className="rounded">
+                        <span>Stormbound</span>
+                    </button>
+
+                    <a href="#">Sobre</a>
+                    <a href="#">Como Jogar</a>
+                    <a href="#">Reinos</a>
+                
             </div>
+           </div>
+        <br />
         </header>
     )
 }
+
